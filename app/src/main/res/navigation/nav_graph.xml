@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.retonav.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_insideFragment"
+            app:destination="@id/insideFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/insideFragment"
+        android:name="com.example.retonav.InsideFragment"
+        android:label="fragment_inside"
+        tools:layout="@layout/fragment_inside">
+        <argument
+            android:name="nombre"
+            app:argType="string" />
+        <argument
+            android:name="appaterno"
+            app:argType="string" />
+        <argument
+            android:name="apmaterno"
+            app:argType="string" />
+        <argument
+            android:name="usuario"
+            app:argType="string" />
+        <argument
+            android:name="correo"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
